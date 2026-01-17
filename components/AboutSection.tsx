@@ -35,7 +35,7 @@ export default function AboutSection() {
     return (
         <motion.section
             id="about"
-            className="max-w-6xl mx-auto px-6 py-12"
+            className="max-w-6xl mx-auto px-4 sm:px-6 py-8 sm:py-12"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.1 }}
@@ -47,8 +47,8 @@ export default function AboutSection() {
                 <div className="space-y-8">
                     {/* Education */}
                     <motion.div variants={itemVariants}>
-                        <h2 className="flex items-center gap-3 text-2xl font-bold text-white mb-6">
-                            <GraduationCap className="text-cyan-400" />
+                        <h2 className="flex items-center gap-2 sm:gap-3 text-xl sm:text-2xl font-bold text-white mb-4 sm:mb-6">
+                            <GraduationCap className="text-cyan-400 w-5 h-5 sm:w-6 sm:h-6" />
                             EDUCATION
                         </h2>
                         <div className="space-y-6">
@@ -70,8 +70,8 @@ export default function AboutSection() {
 
                     {/* Achievements */}
                     <motion.div variants={itemVariants}>
-                        <h2 className="flex items-center gap-3 text-2xl font-bold text-white mb-6">
-                            <Trophy className="text-yellow-400" />
+                        <h2 className="flex items-center gap-2 sm:gap-3 text-xl sm:text-2xl font-bold text-white mb-4 sm:mb-6">
+                            <Trophy className="text-yellow-400 w-5 h-5 sm:w-6 sm:h-6" />
                             ACHIEVEMENTS
                         </h2>
                         <ul className="space-y-4 text-left">
@@ -88,8 +88,8 @@ export default function AboutSection() {
 
                     {/* Experience */}
                     <motion.div variants={itemVariants}>
-                        <h2 className="flex items-center gap-3 text-2xl font-bold text-white mb-6">
-                            <Terminal className="text-green-400" />
+                        <h2 className="flex items-center gap-2 sm:gap-3 text-xl sm:text-2xl font-bold text-white mb-4 sm:mb-6">
+                            <Terminal className="text-green-400 w-5 h-5 sm:w-6 sm:h-6" />
                             EXPERIENCE
                         </h2>
                         <motion.div
@@ -97,9 +97,9 @@ export default function AboutSection() {
                             whileHover="hover"
                             variants={hoverVariants}
                         >
-                            <div className="flex justify-between items-start mb-2">
-                                <h3 className="text-lg font-semibold text-white">Freelancer</h3>
-                                <span className="text-sm text-gray-500">Jan 2025 - Present</span>
+                            <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start mb-2 gap-1">
+                                <h3 className="text-base sm:text-lg font-semibold text-white">Freelancer</h3>
+                                <span className="text-xs sm:text-sm text-gray-500">Jan 2025 - Present</span>
                             </div>
                             <p className="text-gray-300 text-sm leading-relaxed text-left">
                                 Worked as a freelance software developer delivering full-stack web and AI-driven applications for multiple clients. Built scalable backend systems using Node.js, Express.js, and MongoDB, including REST APIs, authentication, and agent-based chatbot workflows. Developed React-based frontend interfaces and led backend development for an event management application with event creation, registration, and administrative features. Collaborated with small teams using Agile practices, contributing to code reviews, debugging, and sprint-based deliveries.
@@ -111,20 +111,20 @@ export default function AboutSection() {
 
                 {/* Right Column - Technical Arsenal */}
                 <motion.div variants={itemVariants}>
-                    <h2 className="flex items-center gap-3 text-2xl font-bold text-white mb-6">
-                        <Terminal className="text-cyan-400" />
+                    <h2 className="flex items-center gap-2 sm:gap-3 text-xl sm:text-2xl font-bold text-white mb-4 sm:mb-6">
+                        <Terminal className="text-cyan-400 w-5 h-5 sm:w-6 sm:h-6" />
                         TECHNICAL ARSENAL
                     </h2>
 
                     {/* Languages */}
-                    <div className="mb-6">
-                        <h3 className="flex items-center gap-2 text-sm font-semibold text-gray-500 uppercase tracking-wider mb-3">
+                    <div className="mb-4 sm:mb-6">
+                        <h3 className="flex items-center gap-2 text-xs sm:text-sm font-semibold text-gray-500 uppercase tracking-wider mb-2 sm:mb-3">
                             <Code size={14} />
                             Languages
                         </h3>
-                        <div className="flex flex-wrap gap-2">
+                        <div className="flex flex-wrap gap-1.5 sm:gap-2">
                             {["JavaScript", "TypeScript", "Python", "SQL"].map((skill) => (
-                                <span key={skill} className="px-4 py-2 bg-white/5 border border-white/10 rounded-lg text-gray-300 text-sm">
+                                <span key={skill} className="px-3 sm:px-4 py-1.5 sm:py-2 bg-white/5 border border-white/10 rounded-lg text-gray-300 text-xs sm:text-sm">
                                     {skill}
                                 </span>
                             ))}
@@ -132,14 +132,14 @@ export default function AboutSection() {
                     </div>
 
                     {/* Frontend */}
-                    <div className="mb-6">
-                        <h3 className="flex items-center gap-2 text-sm font-semibold text-gray-500 uppercase tracking-wider mb-3">
+                    <div className="mb-4 sm:mb-6">
+                        <h3 className="flex items-center gap-2 text-xs sm:text-sm font-semibold text-gray-500 uppercase tracking-wider mb-2 sm:mb-3">
                             <Layout size={14} />
                             Frontend
                         </h3>
-                        <div className="flex flex-wrap gap-2">
+                        <div className="flex flex-wrap gap-1.5 sm:gap-2">
                             {["React", "Next.js", "TailwindCSS", "Redux"].map((skill) => (
-                                <span key={skill} className="px-4 py-2 bg-white/5 border border-white/10 rounded-lg text-gray-300 text-sm">
+                                <span key={skill} className="px-3 sm:px-4 py-1.5 sm:py-2 bg-white/5 border border-white/10 rounded-lg text-gray-300 text-xs sm:text-sm">
                                     {skill}
                                 </span>
                             ))}
@@ -147,14 +147,14 @@ export default function AboutSection() {
                     </div>
 
                     {/* Backend & Tools */}
-                    <div className="mb-6">
-                        <h3 className="flex items-center gap-2 text-sm font-semibold text-gray-500 uppercase tracking-wider mb-3">
+                    <div className="mb-4 sm:mb-6">
+                        <h3 className="flex items-center gap-2 text-xs sm:text-sm font-semibold text-gray-500 uppercase tracking-wider mb-2 sm:mb-3">
                             <Server size={14} />
                             Backend & Tools
                         </h3>
-                        <div className="flex flex-wrap gap-2">
+                        <div className="flex flex-wrap gap-1.5 sm:gap-2">
                             {["Node.js", "Express.js", "PostgreSQL", "Prisma", "MongoDB", "Redis", "REST APIs", "WebSocket", "LangChain", "LangGraph", "Git", "GitHub", "Docker", "Postman", "Vercel"].map((skill) => (
-                                <span key={skill} className="px-4 py-2 bg-white/5 border border-white/10 rounded-lg text-gray-300 text-sm">
+                                <span key={skill} className="px-3 sm:px-4 py-1.5 sm:py-2 bg-white/5 border border-white/10 rounded-lg text-gray-300 text-xs sm:text-sm">
                                     {skill}
                                 </span>
                             ))}
@@ -163,10 +163,10 @@ export default function AboutSection() {
 
                     {/* Professional Skills */}
                     <div>
-                        <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-3">Professional Skills</h3>
-                        <div className="flex flex-wrap gap-2">
+                        <h3 className="text-xs sm:text-sm font-semibold text-gray-500 uppercase tracking-wider mb-2 sm:mb-3">Professional Skills</h3>
+                        <div className="flex flex-wrap gap-1.5 sm:gap-2">
                             {["Design Understanding", "Problem Solving", "Team Collaboration", "Visual Design", "Agile"].map((skill) => (
-                                <span key={skill} className="px-4 py-2 bg-cyan-500/10 border border-cyan-500/20 rounded-lg text-cyan-400 text-sm">
+                                <span key={skill} className="px-3 sm:px-4 py-1.5 sm:py-2 bg-cyan-500/10 border border-cyan-500/20 rounded-lg text-cyan-400 text-xs sm:text-sm">
                                     {skill}
                                 </span>
                             ))}

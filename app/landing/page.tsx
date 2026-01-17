@@ -16,13 +16,14 @@ export default function LandingPage() {
                 }}
             />
 
-            {/* Your Content/Components */}
-            <div className="relative z-10">
-                <div className="flex justify-center">
-                    <BlurNav />
-                </div>
+            {/* Fixed Navbar */}
+            <div className="fixed top-0 left-0 right-0 z-50 flex justify-center ">
+                <BlurNav />
+            </div>
 
-                <div className="max-w-6xl mx-auto px-6 pt-12">
+            {/* Your Content/Components */}
+            <div className="relative z-10 pt-12">
+                <div className="max-w-6xl mx-auto px-6 pt-8">
                     <HeroHeader />
                 </div>
 

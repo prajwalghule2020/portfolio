@@ -15,7 +15,7 @@ export default function BlurNav(): React.ReactNode {
                 <NavigationMenuItem>
                     <NavigationMenuLink
                         href="/landing#about"
-                        className="text-white hover:bg-white/15 rounded-full px-4 py-2 transition-colors"
+                        className="text-white hover:bg-white/15 rounded-full px-4 py-2 text-sm transition-colors"
                         style={{ cursor: "pointer" }}
                     >
                         About
@@ -24,7 +24,7 @@ export default function BlurNav(): React.ReactNode {
                 <NavigationMenuItem>
                     <NavigationMenuLink
                         href="/landing#projects"
-                        className="text-white hover:bg-white/15 rounded-full px-4 py-2 transition-colors"
+                        className="text-white hover:bg-white/15 rounded-full px-4 py-2 text-sm transition-colors"
                         style={{ cursor: "pointer" }}
                     >
                         Projects
@@ -33,7 +33,7 @@ export default function BlurNav(): React.ReactNode {
                 <NavigationMenuItem>
                     <NavigationMenuLink
                         href="/landing#contact"
-                        className="text-white hover:bg-white/15 rounded-full px-4 py-2 transition-colors"
+                        className="text-white hover:bg-white/15 rounded-full px-4 py-2 text-sm transition-colors"
                         style={{ cursor: "pointer" }}
                     >
                         Contact

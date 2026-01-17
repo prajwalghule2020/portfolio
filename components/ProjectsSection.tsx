@@ -66,14 +66,14 @@ export default function ProjectsSection() {
     return (
         <motion.section
             id="projects"
-            className="max-w-6xl mx-auto px-6 py-12"
+            className="max-w-6xl mx-auto px-4 sm:px-6 py-8 sm:py-12"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.1 }}
             variants={containerVariants}
         >
             <motion.h2
-                className="flex items-center gap-3 text-2xl font-bold text-white mb-8"
+                className="flex items-center gap-2 sm:gap-3 text-xl sm:text-2xl font-bold text-white mb-6 sm:mb-8"
                 variants={itemVariants}
             >
                 <FolderOpen className="text-cyan-400" />
@@ -84,7 +84,7 @@ export default function ProjectsSection() {
                 {projects.map((project, index) => (
                     <motion.div
                         key={index}
-                        className="p-6 rounded-lg bg-white/5 border border-white/10 transition-colors"
+                        className="p-4 sm:p-6 rounded-lg bg-white/5 border border-white/10 transition-colors"
                         variants={itemVariants}
                         whileHover={{
                             scale: 1.02,
@@ -92,9 +92,9 @@ export default function ProjectsSection() {
                             transition: { duration: 0.2 },
                         }}
                     >
-                        <div className="flex justify-between items-start mb-4">
-                            <h3 className="text-xl font-bold text-white">{project.title}</h3>
-                            <div className="flex gap-2">
+                        <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-2 sm:gap-4 mb-4">
+                            <h3 className="text-lg sm:text-xl font-bold text-white">{project.title}</h3>
+                            <div className="flex gap-2 flex-shrink-0">
                                 {project.viewLink && (
                                     <a
                                         href={project.viewLink}

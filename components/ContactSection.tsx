@@ -62,14 +62,14 @@ export default function ContactSection() {
     return (
         <motion.section
             id="contact"
-            className="max-w-6xl mx-auto px-6 py-12 pb-24"
+            className="max-w-6xl mx-auto px-4 sm:px-6 py-8 sm:py-12 pb-16 sm:pb-24"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.1 }}
             variants={containerVariants}
         >
             <motion.h2
-                className="flex items-center gap-3 text-2xl font-bold text-white mb-8"
+                className="flex items-center gap-2 sm:gap-3 text-xl sm:text-2xl font-bold text-white mb-6 sm:mb-8"
                 variants={itemVariants}
             >
                 <MessageCircle className="text-cyan-400" />
@@ -77,29 +77,29 @@ export default function ContactSection() {
             </motion.h2>
 
             <motion.p
-                className="text-gray-400 text-lg mb-8"
+                className="text-gray-400 text-base sm:text-lg mb-6 sm:mb-8"
                 variants={itemVariants}
             >
                 Feel free to reach out! I&apos;m always open to discussing new projects, opportunities, or collaborations.
             </motion.p>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+            <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
                 {contactLinks.map((contact, index) => (
                     <motion.a
                         key={index}
                         href={contact.href}
                         target={contact.href.startsWith("http") ? "_blank" : undefined}
                         rel={contact.href.startsWith("http") ? "noopener noreferrer" : undefined}
-                        className={`p-6 rounded-lg border transition-all duration-300 ${contact.bgColor}`}
+                        className={`p-4 sm:p-6 rounded-lg border transition-all duration-300 ${contact.bgColor}`}
                         variants={itemVariants}
                         whileHover={{
                             scale: 1.03,
                             transition: { duration: 0.2 },
                         }}
                     >
-                        <contact.icon className={`${contact.color} mb-3`} size={28} />
-                        <h3 className="text-white font-semibold mb-1">{contact.label}</h3>
-                        <p className="text-gray-400 text-sm">{contact.value}</p>
+                        <contact.icon className={`${contact.color} mb-2 sm:mb-3 w-6 h-6 sm:w-7 sm:h-7`} />
+                        <h3 className="text-white font-semibold mb-1 text-sm sm:text-base">{contact.label}</h3>
+                        <p className="text-gray-400 text-xs sm:text-sm break-all">{contact.value}</p>
                     </motion.a>
                 ))}
             </div>
