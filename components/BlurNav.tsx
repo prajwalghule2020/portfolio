@@ -14,24 +14,27 @@ export default function BlurNav(): React.ReactNode {
             <NavigationMenuList className="gap-1">
                 <NavigationMenuItem>
                     <NavigationMenuLink
-                        href="#about"
+                        href="/landing"
                         className="text-white hover:bg-white/15 rounded-full px-4 py-2 transition-colors"
+                        style={{ cursor: "pointer" }}
                     >
                         About
                     </NavigationMenuLink>
                 </NavigationMenuItem>
                 <NavigationMenuItem>
                     <NavigationMenuLink
-                        href="#projects"
+                        href="/landing"
                         className="text-white hover:bg-white/15 rounded-full px-4 py-2 transition-colors"
+                        style={{ cursor: "pointer" }}
                     >
                         Projects
                     </NavigationMenuLink>
                 </NavigationMenuItem>
                 <NavigationMenuItem>
                     <NavigationMenuLink
-                        href="#contact"
+                        href="/landing"
                         className="text-white hover:bg-white/15 rounded-full px-4 py-2 transition-colors"
+                        style={{ cursor: "pointer" }}
                     >
                         Contact
                     </NavigationMenuLink>

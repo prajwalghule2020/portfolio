@@ -80,6 +80,11 @@ body {
   top: 20%;
   left: 50%;
   transform: translateX(-50%);
+  pointer-events: auto;
+}
+
+.city-header a {
+  cursor: pointer !important;
 }
 
 .city-header h1 {
