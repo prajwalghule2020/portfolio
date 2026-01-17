@@ -13,7 +13,7 @@ export default function Home() {
                             Prajwal Ghule
                         </h1>
                     </Link>
-                    <p className="text-xl sm:text-2xl text-white/50 mt-2 mb-4">Full Stack Developer</p>
+                    <p className="text-xl sm:text-2xl text-white/50 mt-4 mb-4">Full Stack Developer</p>
                     <BlurNav />
                 </div>
             </div>
