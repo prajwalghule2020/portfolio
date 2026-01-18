@@ -39,15 +39,26 @@ export default function CityScene(): React.ReactNode {
         containerRef.current.appendChild(renderer.domElement);
         rendererRef.current = renderer;
 
-        // Camera - exact original values
+        // Camera - starts from top view
         const camera = new THREE.PerspectiveCamera(
             20,
             window.innerWidth / window.innerHeight,
             1,
             500
         );
-        camera.position.set(0, 2, 14);
+        // Start from top view - close enough to see city through fog
+        camera.position.set(0, 14, 0.1);
         cameraRef.current = camera;
+        
+        // Animate camera from top down to side view
+        gsap.to(camera.position, {
+            x: 0,
+            y: 2,
+            z: 14,
+            duration: 3,
+            ease: "power1.inOut",
+            delay: 0.3
+        });
 
         // Scene
         const scene = new THREE.Scene();
