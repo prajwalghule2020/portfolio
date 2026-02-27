@@ -90,16 +90,20 @@ export default function ContactSection() {
                         href={contact.href}
                         target={contact.href.startsWith("http") ? "_blank" : undefined}
                         rel={contact.href.startsWith("http") ? "noopener noreferrer" : undefined}
-                        className={`p-4 sm:p-6 rounded-lg border transition-all duration-300 ${contact.bgColor}`}
+                        className={`p-4 sm:p-6 rounded-lg border transition-all duration-300 ${contact.bgColor} flex flex-col items-center justify-center`}
                         variants={itemVariants}
                         whileHover={{
                             scale: 1.03,
                             transition: { duration: 0.2 },
                         }}
                     >
-                        <contact.icon className={`${contact.color} mb-2 sm:mb-3 w-6 h-6 sm:w-7 sm:h-7`} />
-                        <h3 className="text-white font-semibold mb-1 text-sm sm:text-base">{contact.label}</h3>
-                        <p className="text-gray-400 text-xs sm:text-sm break-all">{contact.value}</p>
+                        <div className="flex flex-col items-center justify-center w-full">
+                            <div className="flex items-center gap-3 mb-2 sm:mb-3 justify-center">
+                                <contact.icon className={`${contact.color} w-6 h-6 sm:w-7 sm:h-7`} />
+                                <h3 className="text-white font-semibold text-sm sm:text-base text-center">{contact.label}</h3>
+                            </div>
+                            <p className="text-gray-400 text-xs sm:text-sm break-all text-center w-full">{contact.value}</p>
+                        </div>
                     </motion.a>
                 ))}
             </div>
